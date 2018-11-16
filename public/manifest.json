@@ -1,6 +1,6 @@
 {
-  "name": "my-vue-app",
-  "short_name": "my-vue-app",
+  "name": "runbypace",
+  "short_name": "runbypace",
   "icons": [
     {
       "src": "/img/icons/android-chrome-192x192.png",
@@ -16,5 +16,5 @@
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#000000",
-  "theme_color": "#4DBA87"
+  "theme_color": "#da532c"
 }
