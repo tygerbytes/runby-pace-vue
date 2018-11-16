@@ -1,7 +1,7 @@
 import Vue from 'vue';
 
 import BootstrapVue from 'bootstrap-vue';
-// Using "United" bootswatch
+// Using bootswatch
 import '@/assets/css/bootstrap.min.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
