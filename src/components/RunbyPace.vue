@@ -274,4 +274,9 @@ export default {
 </script>
 
 <style scoped>
+  ::placeholder {
+    font-style: italic;
+    font-size: 1rem;
+    color: lightgray;
+  }
 </style>
