@@ -1,6 +1,6 @@
 {
-  "name": "runbypace",
-  "short_name": "runbypace",
+  "name": "Runby Pace",
+  "short_name": "Runby Pace",
   "icons": [
     {
       "src": "/img/icons/android-chrome-192x192.png",
@@ -15,6 +15,6 @@
   ],
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#000000",
+  "background_color": "#da532c",
   "theme_color": "#da532c"
 }
