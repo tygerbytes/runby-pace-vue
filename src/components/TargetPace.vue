@@ -1,9 +1,9 @@
 <template>
 <div class="runby">
 
-  <div class="jumbotron">
-    <p>To fully benefit from your <strong>{{ runType.name }}</strong>, your pace should be</p>
-    <h1>{{ pace }}</h1>
+  <div class="jumbotron pb-4 mt-4">
+    <p class="diplay-4">To fully benefit from your <strong>{{ runType.name }}</strong>, your pace should be</p>
+    <h1 class="display-4">{{ pace }}</h1>
   </div>
 
   <div class="col-lg-12">
@@ -20,9 +20,12 @@
 <script>
 export default {
   name: 'TargetPace',
+  beforeCreate() {
+    this.lib = this.$store.state.RunbyLib;
+  },
   data() {
     return {
-      runType: this.$store.state.RunbyLib.getRunType(this.runTypeCode),
+      runType: this.lib.getRunType(this.runTypeCode),
     };
   },
   props: {

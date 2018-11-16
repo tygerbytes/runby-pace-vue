@@ -43,7 +43,7 @@
                 @change="changeRunType()"
                 class="form-control"
                 v-model="runTypeOption">
-              <option v-for="run in runTypes" v-bind:value="run.code" v-bind:key="run.Code">
+              <option v-for="run in lib.runTypes" v-bind:value="run.code" v-bind:key="run.Code">
                 {{ run.name }}
               </option>
             </select>
@@ -65,13 +65,15 @@
 <script>
 export default {
   name: 'RunbyPace',
+  beforeCreate() {
+    this.lib = this.$store.state.RunbyLib;
+  },
   data() {
     return {
       submitted: false,
       fiveKmRaceTime: this.fiveKmRaceTimeDefault,
       runTypeOption: this.runTypeDefault,
-      runType: this.$store.state.RunbyLib.getRunType(this.runTypeDefault),
-      runTypes: this.$store.state.RunbyLib.runTypes,
+      runType: this.lib.getRunType(this.runTypeDefault),
     };
   },
   props: {
@@ -79,9 +81,7 @@ export default {
     runTypeDefault: String,
   },
   computed: {
-    lib() {
-      return this.$store.state.RunbyLib;
-    },
+
     missingRaceTime() {
       return this.submitted && this.fiveKmRaceTime === '';
     },
