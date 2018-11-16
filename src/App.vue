@@ -44,17 +44,17 @@ export default {
     border-top: 1px solid #e5e5e5;
   }
 
+  .jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    padding-top: 1.75rem;
+    padding-bottom: 1rem;
+  }
+
   @media (min-width: 768px) {
     .container {
       max-width: 730px;
     }
-  }
-
-  .jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
   }
 
   #app {

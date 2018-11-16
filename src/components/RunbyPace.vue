@@ -18,8 +18,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1">&#x23f1;</span>
             </div>
-            <input class="form-control"
-                   type="text"
+            <input type="text"
                    v-model="fiveKmRaceTime"
                    v-bind:class="{
                      'form-control': true,
