@@ -23,7 +23,7 @@ const units = {
 
 const TimeUtils = {
   isTimeObject(time) {
-    return Object.prototype.hasOwnProperty.call(time, 'totalMinutes');
+    return time && Object.prototype.hasOwnProperty.call(time, 'totalMinutes');
   },
   validTime(time) {
     return this.isTimeObject(time) ||

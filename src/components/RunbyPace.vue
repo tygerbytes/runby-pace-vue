@@ -68,7 +68,7 @@ export default {
   beforeCreate() {
     this.lib = this.$store.state.RunbyLib;
     this.defaults = {
-      fiveKmRaceTime: localStorage.fiveKmRaceTime,
+      fiveKmRaceTime: localStorage.fiveKmRaceTime || '',
       runTypeOption: localStorage.runTypeOption || 'DistanceRun',
     };
   },
