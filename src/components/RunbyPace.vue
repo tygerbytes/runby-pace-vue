@@ -67,21 +67,20 @@ export default {
   name: 'RunbyPace',
   beforeCreate() {
     this.lib = this.$store.state.RunbyLib;
+    this.defaults = {
+      fiveKmRaceTime: localStorage.fiveKmRaceTime,
+      runTypeOption: localStorage.runTypeOption || 'DistanceRun',
+    };
   },
   data() {
     return {
       submitted: false,
-      fiveKmRaceTime: this.fiveKmRaceTimeDefault,
-      runTypeOption: this.runTypeDefault,
-      runType: this.lib.getRunType(this.runTypeDefault),
+      fiveKmRaceTime: this.defaults.fiveKmRaceTime,
+      runTypeOption: this.defaults.runTypeOption,
+      runType: this.lib.getRunType(this.defaults.runTypeOption),
     };
   },
-  props: {
-    fiveKmRaceTimeDefault: String,
-    runTypeDefault: String,
-  },
   computed: {
-
     missingRaceTime() {
       return this.submitted && this.fiveKmRaceTime === '';
     },
@@ -108,11 +107,16 @@ export default {
     changeRunType() {
       this.runType = this.lib.getRunType(this.runTypeOption);
     },
+    persist() {
+      localStorage.fiveKmRaceTime = this.fiveKmRaceTime;
+      localStorage.runTypeOption = this.runTypeOption;
+    },
     getMyPace() {
       this.submitted = true;
       if (!(this.formValid)) {
         return;
       }
+      this.persist();
       this.$router.push({
         name: 'targetPace',
         params: {

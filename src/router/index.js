@@ -14,10 +14,6 @@ export default new Router({
     path: '/',
     name: 'Home',
     component: RunbyPace,
-    props: {
-      fiveKmRaceTimeDefault: '',
-      runTypeDefault: 'LongRun',
-    },
   }, {
     path: '/targetPace/:fiveKmRaceTime&:runTypeCode',
     name: 'targetPace',
