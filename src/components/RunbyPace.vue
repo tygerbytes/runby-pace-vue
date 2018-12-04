@@ -1,11 +1,9 @@
 <template>
   <div class="runby">
-
   <div class="jumbotron">
-    <h1 class="display-4">Runby&#x1F3C3;Pace</h1>
-    <p class="lead"><em>Where running gets really personal</em></p>
+    <h1 class="display-5">How hard should you run today?</h1>
     <hr class="my-4"/>
-    <p>How hard should you run today? Use the form below to find out.</p>
+    <p class="lead"><em>Find out below. Have fun.</em></p>
   </div>
 
   <div class="row marketing">

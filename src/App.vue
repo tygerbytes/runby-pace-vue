@@ -3,7 +3,7 @@
 
     <b-navbar fixed="bottom" toggleable="md" type="light" variant="light">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-      <b-navbar-brand to="/">&#x1F3C3; Runby Pace</b-navbar-brand>
+      <b-navbar-brand to="/">Runby&#x1F3C3;Pace <small>Where running gets really personal</small></b-navbar-brand>
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
           <b-nav-item to="/">Home</b-nav-item>
@@ -49,6 +49,14 @@ export default {
     border-bottom: 1px solid #e5e5e5;
     padding-top: 1.75rem;
     padding-bottom: 1rem;
+  }
+
+  .navbar-brand {
+    line-height: 1rem;
+  }
+  .navbar-brand small {
+    display: block;
+    font-size: 0.48rem;
   }
 
   @media (min-width: 768px) {
