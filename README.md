@@ -1,5 +1,7 @@
 # Runby🏃Pace (Vue.js)
 
+(This project is archived)
+
 Vue.js implementation of [Runby🏃Pace](https://runbypace.com), which provides pace recommendations for different types of runs based on an individual runner's fitness level.
 
 [![RunbyPace logo](runbypace_logo.png)](https://runbypace.com)
